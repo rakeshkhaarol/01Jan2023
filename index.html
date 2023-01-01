@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js treversing</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+
+    </style>
+    <script>
+        //i can write the js code cloging the head tag
+    </script>
+</head>
+<body>
+    <div data-gp="grandperent">
+
+
+        grandperent
+        <div class="perent">
+
+            perent
+            <div id="child1">
+
+                child
+            </div>
+            <div id="child2">
+
+                child2
+            </div>
+        </div>
+    </div>
+    <table class="color1" border>
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Surname
+                </th>
+                <th>
+                    action
+                </th>
+            
+            </tr>
+                
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Deepak
+                </td>
+                <td>
+                    Bairagi
+                </td>
+                <td>
+                    <button>
+                        delete
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Rahul 
+                </td>
+                <td>
+                    patidar
+                </td>
+                <td>
+                    <button>
+                        delete
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    lokesh 
+                </td>
+                <td>
+                    dhanger
+                </td>
+                <td>
+                    <button>
+                        delete
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    hariram 
+                </td>
+                <td>
+                    patidar
+                </td>
+                <td>
+                    <button>
+                        delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //i can write the js code cloging the body tag
+        let stor= document.querySelector('#child1');
+        stor.innerHTML="childran";
+        stor.style.border= "5px solid red"
+        console.log(stor)
+
+        var stor1 = document.querySelector("#child2");
+        stor1.innerHTML='children2'
+        stor1.style.border="5px solid blue"
+        stor1.style.color='darkred'
+
+
+        let s1 = stor.closest('.perent')
+        s1.style.border="5px solid green"
+        console.log(s1)
+
+        const f = stor1.closest("[data-gp=\"grandperent\"]")
+        f.style.border="5px solid black"
+        console.log(f)
+    </script>
+</body>
+</html>
